@@ -102,7 +102,7 @@ function Login() {
 					}}
 				>
                     <NavLink to="/SignUp">
-					    <a href="/" style={{color:'#008080'}}>Create Account</a>
+					    <span style={{color:'#008080'}}>Create Account</span>
 
                     </NavLink>
 				</span>

@@ -1,16 +1,21 @@
 import React, { useState } from 'react'
 import './SignUp.css'
 import { NavLink } from 'react-router-dom'
-import axios from 'axios';
-import { Authenticate } from '../utils';
+// import axios from 'axios';
+// import { Authenticate } from '../utils';
 
 const SignUp = () => { 
 
     const [userName,setUserName] = useState('');
     const [Password,setPassword] = useState('');
     const [contactNo,setContactNo] = useState('');
+    const [message, setMessage] = useState("");
+    
+    
+    let submit = async(e) => {
+        
+        // e.preventDefault();
 
-    const submit = () => {
         if(userName === ''){
             alert('Please enter user name');
         }
@@ -22,21 +27,35 @@ const SignUp = () => {
         }
         else{
             if (Password?.length > 7){
-                axios 
-                    .post('http://127.0.0.1:8000/admin/usersData/users', {
-                        userName: userName,
-                        Password: Password,
-                        contactNo: contactNo,
-                    })
-                    .then((res) => {
-                        if(res.status === 200){
-                            console.log(res.data);
-                            Authenticate(res.data.n, res.data.e_id, res.data.at);
-                        }
-                    })
-                    .catch((err) => {
-                        alert(err.response.data.error);
+                e.preventDefault();
+                try{
+                    let res = await fetch("http://127.0.0.1:8000/users/signup", {
+                        credentials: 'include',
+                        method: "POST",
+                        headers: { 'Content-Type':'application/json',
+                                    'Accept': 'application/json',
+                                    'Access-Control-Allow-Origin':'*',
+                                    'Access-Control-Allow-Methods':'GET, POST, PUT, PATCH, POST, DELETE, OPTIONS',
+                                    },
+                        mode: 'no-cors',
+                        body: {
+                            userName:userName,
+                            Password:Password,
+                            contactNo: contactNo,
+                        },
                     });
+                    // let resJson = await res.json();
+                    if(res.status  === 200 ){
+                        setUserName("");
+                        setPassword("");
+                        setContactNo("");
+                        setMessage("User created successfully");
+                    }else{
+                        setMessage("Some error occured");
+                    }
+                }catch(err){
+                    console.log(err);
+                }
             }
             else{
                 alert('password should have 8 or more characters');

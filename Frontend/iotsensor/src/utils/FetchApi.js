@@ -8,7 +8,9 @@ const FetchApi = (method, url, params, TokenValue) => {
         url: url,
         data: params,
         headers: {
-          Authorization: 'Token ' + TokenValue,
+          Authorization: 'Token' + TokenValue,
+          mode : 'no-cors',
+          
         },
         responseType: 'json',
       })

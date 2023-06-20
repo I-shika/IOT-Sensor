@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+import jwt
 
 
 class Users(models.Model):
