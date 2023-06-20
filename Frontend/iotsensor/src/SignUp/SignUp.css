@@ -1,0 +1,225 @@
+.body{
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    height: 100vh;
+    width: 52vw;
+    background-color: #0bacac;
+    /* color: #ffffff; */
+}
+
+.right{
+    background-color: rgb(226, 224, 224);
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    gap: 1.875rem;    
+    flex-direction: column;
+    color: #008080;
+    height: 100vh;
+    width: 48vw;
+}
+.text{
+    text-align: center;
+    color: white;
+    margin-top: 13.75rem;
+    margin-left: 2.5rem;
+    font-size: 2.5rem;
+    margin-right: -1.25rem;
+    -ms-flow-from: 600;
+    letter-spacing: 0.075rem;
+    
+}
+.heading{
+    font-size: 2.375rem;
+    font-weight: 600;
+}
+.inputLabel{
+    font-size:1.75rem;
+    font-weight: 500;
+    color: black;
+    letter-spacing: 0.05rem;
+    font-family: THICCCOBOI;
+}
+.Input{
+    height: 2.5rem;
+    width: 31.25rem;
+    font-size: 1.25rem;
+    padding: 0.625rem;
+    
+    border: none;
+    border-radius: 0.5rem;
+}
+.signUp-btn{
+    height: 3.75rem;
+    width: 31.25rem;
+    margin-top: 1.25rem;
+    font-size: 1.5rem;
+    background-color: #008080;
+    color: white ;
+    border: none;
+    border-radius: 0.625rem;
+    cursor: pointer;
+}
+.horizontal_line{
+    margin-top: 40vh;
+    margin-left: 1.25rem;
+    margin-right: 8.75rem;
+}
+.robot_img, .uno_img, .voltmeter_img{
+    height: 6.25rem;
+    width: 6.25rem;
+}
+.sensor_img{
+    height: 6.25rem;
+    width: 6.25rem;
+    margin-top: 24vh;
+    float: right;
+    
+}
+@media screen and(max-width: 1408px) {
+    .horizontal_line{
+        margin-top: 28vh;
+    }
+    .sensor_img{
+        margin-top: 30vh;
+    }
+}
+@media screen and (max-width:1175px) {
+    .signUp-btn{
+        width: 25rem;
+    }
+    .inputLabel{
+        font-size: 1.5rem;
+
+    }
+    .Input{
+        width: 25rem;
+    }
+}
+@media screen and (max-width:1010px) {
+    
+    .signUp-btn{
+        width: 20rem;
+    }
+    .inputLabel{
+        font-size: 1.5rem;
+
+    }
+    .Input{
+        width: 20rem;
+        font-size: 1.0rem;
+    }
+    .heading{
+        font-size: 2.1rem;
+        font-weight: 600;
+    }
+}
+@media screen and (max-width: 992px) {
+    .horizontal_line{
+        display: none;
+    }
+    .text{
+        font-size: 2.2rem;
+    }
+    .robot_img, .uno_img, .voltmeter_img{
+        height: 5.25rem;
+        width: 5.25rem;
+    }
+    .sensor_img{
+        display: none;
+    }
+}
+@media screen and (max-width:832px) {
+    .signUp-btn{
+        width: 17rem;
+    }
+    .inputLabel{
+        font-size: 1.5rem;
+
+    }
+    .Input{
+        width: 17rem;
+        font-size: 1.0rem;
+    }
+    .heading{
+        font-size: 1.9rem;
+        font-weight: 600;
+    }
+    .horizontal_line{
+        margin-top: 40px ;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .left{
+        display: none;
+    }
+    .right{
+        width: 100vw;
+    }
+    .signUp-btn{
+        width: 28rem;
+    }
+    .inputLabel{
+        font-size: 2rem;
+
+    }
+    .Input{
+        width: 28rem;
+        font-size: 1.3rem;
+    }
+    .heading{
+        font-size: 2.2rem;
+        font-weight: 600;
+    }
+}
+@media screen and (max-width: 584px) {
+    .left{
+        display: none;
+    }
+    .right{
+        width: 100vw;
+    }
+    .signUp-btn{
+        width: 20rem;
+    }
+    .inputLabel{
+        font-size: 1.7rem;
+
+    }
+    .Input{
+        width: 20rem;
+        font-size: 1.1rem;
+    }
+    .heading{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
+@media screen and (max-width: 382px) {
+    .left{
+        display: none;
+    }
+    .right{
+        width: 100vw;
+    }
+    .signUp-btn{
+        width: 16rem;
+        font-size: 1.2rem;
+    }
+    .inputLabel{
+        font-size: 1.45rem;
+
+    }
+    .Input{
+        width: 16rem;
+        font-size: 1.1rem;
+    }
+    .heading{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
