@@ -32,17 +32,17 @@ const SignUp = () => {
                     let res = await fetch("http://127.0.0.1:8000/users/signup", {
                         credentials: 'include',
                         method: "POST",
-                        headers: { 'Content-Type':'application/json',
+                        headers: {  'contentType': 'application/json; charset=UTF-8',
                                     'Accept': 'application/json',
                                     'Access-Control-Allow-Origin':'*',
                                     'Access-Control-Allow-Methods':'GET, POST, PUT, PATCH, POST, DELETE, OPTIONS',
                                     },
                         mode: 'no-cors',
-                        body: {
+                        body: JSON.stringify({
                             userName:userName,
                             Password:Password,
                             contactNo: contactNo,
-                        },
+                        }),
                     });
                     // let resJson = await res.json();
                     if(res.status  === 200 ){
